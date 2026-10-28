@@ -16,6 +16,29 @@ section{padding:76px 0}.section-head{display:flex;justify-content:space-between;
 .timeline{display:grid;grid-template-columns:1fr 1fr;gap:30px}.timeline-list{border-left:2px solid #d8e6f4;margin:10px 0 0 7px;padding-left:23px}.timeline-item{position:relative;padding:0 0 23px}.timeline-item:before{content:"";position:absolute;left:-30px;top:8px;width:11px;height:11px;border:3px solid white;background:#1688ff;border-radius:50%;box-shadow:0 0 0 1px #1688ff}.timeline-item time{font-size:11px;font-weight:800;color:#1688ff}.timeline-item h3{font-size:14px;margin:3px 0}.timeline-item p{font-size:12px;color:var(--muted);margin:0}.callout{border-radius:16px;background:linear-gradient(135deg,#e8f5ff,#f7fbff);border:1px solid #d4e9fb;padding:25px}.callout h3{margin:0 0 8px}.callout p{font-size:13px;color:#526b83;margin:0}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.contact-box{padding:25px;border-radius:16px;background:white;border:1px solid var(--line)}.contact-box h3{margin:0 0 10px}.contact-box p{font-size:13px;color:var(--muted)}.contact-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.contact-links a{border:1px solid var(--line);border-radius:8px;padding:9px 12px;font-size:12px;font-weight:700}
 footer{background:#040d19;color:#9db0c5;padding:23px 0;font-size:11px}.footer-row{display:flex;justify-content:space-between;gap:15px;align-items:center}.footer-row b{color:white}
 body.light .hero,body.light .dark-section{background:linear-gradient(135deg,#e9f4ff,#dbeaff);color:#14243b}body.light .hero p,body.light .dark-section .section-head p{color:#526782}body.light .code-card,body.light .project{background:white;color:#152238;border-color:#d3e4f4}body.light .code-top,body.light .code-foot,body.light .project p,body.light .project ul{color:#526782}body.light .tag{color:#20466d;border-color:#9bbad8;background:#ffffff90}body.light .btn.secondary{color:#17314d;border-color:#9bb6d3}body.light .project h3{color:#152238}body.light .mini-label{color:#24527d}
+
+.workflow-card{position:relative;z-index:1;padding:25px;border:1px solid #249fe477;border-radius:20px;background:linear-gradient(145deg,rgba(10,53,91,.94),rgba(5,21,40,.97));box-shadow:0 28px 80px #0005,inset 0 1px #ffffff12;overflow:hidden}
+.workflow-card:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 85% 0%,#1688ff25,transparent 48%);pointer-events:none}
+.workflow-head{position:relative;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding-bottom:20px;border-bottom:1px solid #8bcfff20}
+.workflow-kicker{font-size:10px;letter-spacing:.12em;color:#61d9ff;font-weight:800}
+.workflow-head h3{font-size:clamp(20px,2vw,28px);line-height:1.25;margin:10px 0 7px;color:#f3f8ff}
+.workflow-head h3 em{font-style:normal;color:#35c8ff}.workflow-head p{font-size:13px;color:#b8d0e9;margin:0}
+.status-pill{white-space:nowrap;display:flex;align-items:center;gap:6px;border:1px solid #35c8ff45;border-radius:30px;padding:6px 9px;color:#aeeaff;font-size:9px;letter-spacing:.08em}
+.status-pill i{width:6px;height:6px;background:#36d6ff;border-radius:50%;box-shadow:0 0 10px #36d6ff}
+.flow-line{position:relative;display:grid;grid-template-columns:1fr 22px 1fr 22px 1fr;align-items:center;gap:7px;padding:20px 0 22px}
+.flow-node{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;font-size:11px;color:#e8f5ff}
+.flow-icon,.oracle-word{width:58px;height:58px;border:1px solid #2ccaff9c;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 30% 20%,#12609a,#071c35);color:#54dcff;font-size:27px;box-shadow:0 0 20px #009dff1a}
+.oracle-word{font-size:12px;font-weight:900;color:#ff463e;letter-spacing:-.06em}.flow-arrow{text-align:center;color:#35c8ff;font-size:23px}
+.workflow-items{position:relative;border:1px solid #35a9e644;border-radius:13px;overflow:hidden}
+.workflow-item{display:flex;align-items:center;gap:12px;padding:10px 12px;background:#061a2d80;border-bottom:1px solid #76caff20;transition:background .2s}
+.workflow-item:last-child{border-bottom:0}.workflow-item:hover{background:#0e3b60}
+.item-icon{width:34px;height:34px;flex:0 0 34px;display:grid;place-items:center;border-radius:10px;background:#0e4775;color:#9de9ff;font-size:19px}
+.workflow-item span:nth-child(2){min-width:0;display:flex;flex-direction:column}.workflow-item b{font-size:12px;color:#eff8ff}.workflow-item small{font-size:10px;color:#9dbbd5;margin-top:2px}
+.item-arrow{margin-left:auto;color:#49ceff;font-size:24px}.workflow-steps{display:flex;align-items:center;justify-content:center;gap:clamp(7px,1.5vw,18px);margin-top:17px;padding:10px 8px;border:1px solid #1c8fc65c;border-radius:30px;background:#06305280;color:#dcefff;font-size:11px}.workflow-steps b{color:#32c9ff;font-size:15px}
+#project-finance,#project-cost,#project-cash{scroll-margin-top:90px}
+@media(max-width:850px){.workflow-card{max-width:620px}.workflow-head h3{font-size:24px}}
+@media(max-width:600px){.workflow-card{padding:18px}.workflow-head{flex-direction:column}.flow-line{gap:4px;grid-template-columns:1fr 15px 1fr 15px 1fr}.flow-icon,.oracle-word{width:48px;height:48px}.flow-node{font-size:10px}.workflow-item{padding:9px}.workflow-steps{gap:9px;font-size:10px}}
+
 @media(max-width:850px){.links{gap:13px}.hero-grid,.about-grid,.timeline{grid-template-columns:1fr}.code-card{max-width:620px}.projects{grid-template-columns:repeat(2,1fr)}.hero{padding:68px 0}.section-head{align-items:start;flex-direction:column}}
 @media(max-width:600px){.wrap{width:min(100% - 28px,1160px)}header{height:auto;min-height:65px}.nav{padding:12px 0;flex-wrap:wrap}.links{order:3;width:100%;overflow:auto;padding:5px 0 2px;gap:18px}.links a{white-space:nowrap}.theme{margin-left:auto}.hero h1{font-size:42px}.projects,.contact-grid{grid-template-columns:1fr}.principles{grid-template-columns:1fr}.skill-row{grid-template-columns:105px 1fr}.section-head h2{font-size:26px}section{padding:56px 0}.footer-row{align-items:flex-start;flex-direction:column}}
 </style>
@@ -41,20 +64,22 @@ body.light .hero,body.light .dark-section{background:linear-gradient(135deg,#e9f
    <div class="tags"><span class="tag">Oracle EBS 12.1.1</span><span class="tag">PL/SQL</span><span class="tag">Oracle Forms</span><span class="tag">원가·회계 ERP</span></div>
    <div class="actions"><a class="btn primary" href="#projects">프로젝트 보기 ↗</a><a class="btn secondary" href="#contact">연락하기 →</a></div>
   </div>
-  <div class="code-card" aria-label="ERP 코드 콘셉트">
-   <div class="code-top"><span>ERP_SYSTEM / 개선과 자동화</span><span class="dots"><i></i><i></i><i></i></span></div>
-   <pre>-- ERP 업무 개선 예시
-SELECT project_no,
-       task_name,
-       expenditure_type,
-       amount
-  FROM project_costs
- WHERE org_id = 81
-   AND period = :p_period;
-
--- 목표: 정확한 원가와
--- 신뢰할 수 있는 데이터</pre>
-   <div class="code-foot"><span>ORACLE · PL/SQL</span><span>BUILD / IMPROVE / SUPPORT</span></div>
+  <div class="workflow-card" aria-label="ERP 업무 개선 및 자동화 대시보드">
+   <div class="workflow-head">
+    <div><span class="workflow-kicker">ORACLE ERP · SYSTEM · AUTOMATION</span><h3>ERP 업무 개선 <em>· 자동화</em></h3><p>업무 흐름을 이해하고, 데이터로 연결합니다.</p></div>
+    <span class="status-pill"><i></i> WORKFLOW</span>
+   </div>
+   <div class="flow-line">
+    <div class="flow-node"><span class="flow-icon">▤</span><b>업무 데이터</b></div><span class="flow-arrow">→</span>
+    <div class="flow-node"><span class="oracle-word">ORACLE</span><b>Oracle EBS</b></div><span class="flow-arrow">→</span>
+    <div class="flow-node"><span class="flow-icon">⚙</span><b>검증 · 자동화</b></div>
+   </div>
+   <div class="workflow-items">
+    <a class="workflow-item" href="#project-finance"><span class="item-icon">▤</span><span><b>회계 인터페이스</b><small>경비 데이터 · AP 처리 흐름</small></span><span class="item-arrow">›</span></a>
+    <a class="workflow-item" href="#project-cost"><span class="item-icon">▥</span><span><b>호선별 원가 · 예산</b><small>프로젝트 · 태스크 · 지출유형</small></span><span class="item-arrow">›</span></a>
+    <a class="workflow-item" href="#project-cash"><span class="item-icon">▤</span><span><b>자금 잔액 연계</b><small>CMS 잔액 · ERP 조회</small></span><span class="item-arrow">›</span></a>
+   </div>
+   <div class="workflow-steps"><span>분석</span><b>→</b><span>개선</span><b>→</b><span>검증</span><b>→</b><span>운영</span></div>
   </div>
  </div>
 </section>
@@ -88,9 +113,9 @@ SELECT project_no,
  <div class="wrap">
   <div class="section-head"><div><div class="kicker">Selected projects</div><h2>주요 프로젝트 경험</h2></div><p>업무 문제, 개선 내용, 결과 중심으로 정리한 대표 사례입니다.</p></div>
   <div class="projects">
-   <article class="project"><div class="project-num">PROJECT 01 / FINANCE</div><h3>해외 법인카드 경비 처리 개선</h3><p>카드 사용내역 임포트 및 경비 추가 기능을 개선해 해외 출장자의 전표 처리 흐름을 지원했습니다.</p><ul><li>카드 사용내역 인터페이스 개선</li><li>늦게 도착하는 세액정보 실시간 반영</li></ul><div class="label-row"><span class="mini-label">AP</span><span class="mini-label">Interface</span><span class="mini-label">경비</span></div></article>
-   <article class="project"><div class="project-num">PROJECT 02 / COST</div><h3>호선별 직접비 예산 집행</h3><p>호선·태스크·지출유형·지출조직 기준으로 송장 생성이 이뤄지도록 ERP 프로세스를 구축했습니다.</p><ul><li>예산 집행 기준 정립</li><li>프로젝트 원가 추적성 강화</li></ul><div class="label-row"><span class="mini-label">PA</span><span class="mini-label">원가관리</span><span class="mini-label">예산</span></div></article>
-   <article class="project"><div class="project-num">PROJECT 03 / CASH</div><h3>TR 일일 잔액 결재 지원</h3><p>회사 CMS 잔액을 ERP에서 확인할 수 있도록 연계해 자금 현황 확인과 일일 보고를 지원했습니다.</p><ul><li>잔액 및 가용자금 조회</li><li>일일 보고 업무 지원</li></ul><div class="label-row"><span class="mini-label">TR</span><span class="mini-label">CMS</span><span class="mini-label">자금관리</span></div></article>
+   <article class="project" id="project-finance"><div class="project-num">PROJECT 01 / FINANCE</div><h3>해외 법인카드 경비 처리 개선</h3><p>카드 사용내역 임포트 및 경비 추가 기능을 개선해 해외 출장자의 전표 처리 흐름을 지원했습니다.</p><ul><li>카드 사용내역 인터페이스 개선</li><li>늦게 도착하는 세액정보 실시간 반영</li></ul><div class="label-row"><span class="mini-label">AP</span><span class="mini-label">Interface</span><span class="mini-label">경비</span></div></article>
+   <article class="project" id="project-cost"><div class="project-num">PROJECT 02 / COST</div><h3>호선별 직접비 예산 집행</h3><p>호선·태스크·지출유형·지출조직 기준으로 송장 생성이 이뤄지도록 ERP 프로세스를 구축했습니다.</p><ul><li>예산 집행 기준 정립</li><li>프로젝트 원가 추적성 강화</li></ul><div class="label-row"><span class="mini-label">PA</span><span class="mini-label">원가관리</span><span class="mini-label">예산</span></div></article>
+   <article class="project" id="project-cash"><div class="project-num">PROJECT 03 / CASH</div><h3>TR 일일 잔액 결재 지원</h3><p>회사 CMS 잔액을 ERP에서 확인할 수 있도록 연계해 자금 현황 확인과 일일 보고를 지원했습니다.</p><ul><li>잔액 및 가용자금 조회</li><li>일일 보고 업무 지원</li></ul><div class="label-row"><span class="mini-label">TR</span><span class="mini-label">CMS</span><span class="mini-label">자금관리</span></div></article>
    <article class="project"><div class="project-num">PROJECT 04 / SHIPBUILDING</div><h3>조선종합시스템 TFT</h3><p>TFT 팀 리더로 설계·구매·의장 자재·강재 입고와 불출 테스트를 수행하고 확인된 시스템 문제를 개선했습니다.</p><ul><li>업무 시나리오 테스트</li><li>오류 확인 및 수정</li></ul><div class="label-row"><span class="mini-label">TFT</span><span class="mini-label">테스트</span><span class="mini-label">시스템 개선</span></div></article>
    <article class="project"><div class="project-num">PROJECT 05 / ERP SUPPORT</div><h3>Oracle EBS 운영 및 인터페이스</h3><p>AP·PA 관련 인터페이스 오류와 회계 처리 흐름을 분석하고, 원인 파악 및 재처리 절차를 지원했습니다.</p><ul><li>인터페이스 상태·오류 분석</li><li>전표 및 프로젝트 원가 흐름 점검</li></ul><div class="label-row"><span class="mini-label">Oracle EBS</span><span class="mini-label">AP</span><span class="mini-label">PA</span></div></article>
    <article class="project"><div class="project-num">PROJECT 06 / PROCESS</div><h3>ERP 업무 프로세스 개선</h3><p>현업 요구를 분석해 ERP 화면·프로그램·데이터 흐름을 점검하고 업무 처리의 정확성과 편의성을 높입니다.</p><ul><li>요건 분석 및 테스트</li><li>운영 이슈 대응과 개선</li></ul><div class="label-row"><span class="mini-label">운영</span><span class="mini-label">분석</span><span class="mini-label">개선</span></div></article>
