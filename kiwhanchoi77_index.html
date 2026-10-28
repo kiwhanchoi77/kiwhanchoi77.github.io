@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>최기환 | Oracle EBS 관리자 · 조선소 ERP</title>
+  <style>
+    :root {
+      --bg: #0b1120;
+      --card: #151c2c;
+      --card-hover: #1c2538;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --accent: #3b82f6;
+      --accent-light: #60a5fa;
+      --border: #1e293b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(11, 17, 32, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+      padding: 16px 0;
+    }
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo { font-weight: 700; font-size: 1.2rem; color: var(--accent-light); }
+    nav ul { display: flex; gap: 28px; list-style: none; }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
+    nav a:hover { color: var(--text); }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    /* Hero with background - 6번 항구 선박 */
+    .hero {
+      position: relative;
+      padding: 180px 0 120px;
+      text-align: center;
+      background: linear-gradient(rgba(11, 17, 32, 0.72), rgba(11, 17, 32, 0.82)),
+                  url('rendered/OyRRQ.jpg') center/cover no-repeat;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero h1 {
+      font-size: 3.4rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 8px;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+    }
+    .hero .en { color: #cbd5e1; font-size: 1.15rem; margin-bottom: 16px; }
+    .hero .subtitle {
+      font-size: 1.45rem;
+      color: var(--accent-light);
+      font-weight: 500;
+      margin-bottom: 28px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+    .hero p.intro {
+      max-width: 680px;
+      margin: 0 auto;
+      color: #e2e8f0;
+      font-size: 1.05rem;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+    }
+
+    section { padding: 80px 0; }
+    /* Skills section with ERP background - 5번 */
+    #skills {
+      background: linear-gradient(rgba(11, 17, 32, 0.88), rgba(11, 17, 32, 0.92)),
+                  url('rendered/DWFrD.jpg') center/cover no-repeat;
+      background-attachment: fixed;
+    }
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    h2 span { color: var(--accent-light); }
+
+    .timeline { display: grid; gap: 24px; }
+    .exp-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .exp-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+    .exp-card h3 { font-size: 1.3rem; margin-bottom: 6px; }
+    .period {
+      display: inline-block;
+      background: rgba(59, 130, 246, 0.15);
+      color: var(--accent-light);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .skill-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .skill-item:hover {
+      background: var(--card-hover);
+      border-color: var(--accent);
+    }
+
+    .contact-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .contact-box a {
+      color: var(--accent-light);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .contact-box a:hover { text-decoration: underline; }
+
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero { padding: 140px 0 80px; min-height: 60vh; }
+      .hero h1 { font-size: 2.5rem; }
+      nav ul { gap: 16px; font-size: 0.9rem; }
+      section { padding: 60px 0; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <div class="logo">최기환</div>
+      <ul>
+        <li><a href="#about">소개</a></li>
+        <li><a href="#experience">경력</a></li>
+        <li><a href="#skills">전문영역</a></li>
+        <li><a href="#contact">연락처</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero" id="about">
+    <div class="container">
+      <h1>최기환</h1>
+      <div class="en">Choi Ki Hwan</div>
+      <div class="subtitle">Oracle EBS 관리자 · 조선소 ERP 전문가</div>
+      <p class="intro">
+        조선소 현장에서 17년간 개발 업무와 10년간 ERP 유지보수를 수행하며,<br>
+        Oracle EBS 기반 시스템의 안정적인 운영과 회계·자금 프로세스 개선을 담당해 왔습니다.
+      </p>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <h2>경력 <span>요약</span></h2>
+      <div class="timeline">
+        <div class="exp-card">
+          <div class="period">17년</div>
+          <h3>조선소 개발업무</h3>
+          <p>조선소 환경에서 시스템 개발 및 운영 업무를 장기간 수행. 현장 프로세스와 연계된 ERP 기능 개선, 신규 요구사항 분석 및 대응.</p>
+        </div>
+        <div class="exp-card">
+          <div class="period">10년</div>
+          <h3>조선소 ERP 유지보수</h3>
+          <p>Oracle EBS 기반 ERP 시스템의 안정적인 운영과 유지보수. 장애 대응, 패치 관리, 사용자 지원 및 시스템 성능 최적화.</p>
+        </div>
+        <div class="exp-card">
+          <div class="period">회계 · 재무</div>
+          <h3>채무·채권·내부회계·자금관리</h3>
+          <p>채무(AP), 채권(AR), 내부회계, 자금관리 및 지급 프로세스 관련 업무 경험. 회계 모듈 설정, 운영 지원 및 관련 이슈 해결.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2>주요 <span>전문 영역</span></h2>
+      <div class="skills-grid">
+        <div class="skill-item">Oracle EBS 관리 및 운영</div>
+        <div class="skill-item">조선소 ERP 유지보수</div>
+        <div class="skill-item">채무(AP) / 채권(AR)</div>
+        <div class="skill-item">내부회계</div>
+        <div class="skill-item">자금관리 · 지급 프로세스</div>
+        <div class="skill-item">ERP 기능 개선 및 개발 지원</div>
+        <div class="skill-item">사용자 지원 및 장애 대응</div>
+        <div class="skill-item">시스템 안정화 및 운영</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>연락처</h2>
+      <div class="contact-box">
+        <p style="margin-bottom: 12px;">이메일</p>
+        <p><a href="mailto:your-email@example.com">your-email@example.com</a></p>
+        <p style="margin-top: 20px; color: var(--muted); font-size: 0.9rem;">
+          ※ 실제 이메일로 변경해 주세요.<br>
+          LinkedIn, 전화 등 추가 연락처가 있으면 알려주시면 반영해 드립니다.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      © 2026 최기환 (Choi Ki Hwan). All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
