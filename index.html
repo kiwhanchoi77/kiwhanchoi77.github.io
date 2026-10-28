@@ -36,6 +36,25 @@ body.light .hero,body.light .dark-section{background:linear-gradient(135deg,#e9f
 .workflow-item span:nth-child(2){min-width:0;display:flex;flex-direction:column}.workflow-item b{font-size:12px;color:#eff8ff}.workflow-item small{font-size:10px;color:#9dbbd5;margin-top:2px}
 .item-arrow{margin-left:auto;color:#49ceff;font-size:24px}.workflow-steps{display:flex;align-items:center;justify-content:center;gap:clamp(7px,1.5vw,18px);margin-top:17px;padding:10px 8px;border:1px solid #1c8fc65c;border-radius:30px;background:#06305280;color:#dcefff;font-size:11px}.workflow-steps b{color:#32c9ff;font-size:15px}
 #project-finance,#project-cost,#project-cash{scroll-margin-top:90px}
+
+.career-layout{display:grid;grid-template-columns:1.02fr .98fr;gap:22px;align-items:stretch}
+.career-main{background:#fff;border:1px solid var(--line);border-radius:18px;padding:25px 26px;box-shadow:0 10px 32px #17365b08}
+.career-intro{display:flex;gap:13px;align-items:center;padding:15px 16px;margin-bottom:25px;border-radius:13px;background:linear-gradient(120deg,#edf7ff,#f8fbff);border:1px solid #dceeff}
+.career-icon{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:12px;background:#1688ff;color:#fff;font-size:24px}
+.career-intro b{font-size:14px;color:#152238}.career-intro p{font-size:12px;color:#60728a;margin:3px 0 0}
+.career-main .timeline-list{margin-top:0}.career-main .timeline-item{padding-bottom:25px}.career-main .timeline-item:last-child{padding-bottom:0}
+.career-main .timeline-item h3{font-size:15px;margin:5px 0 4px}.career-main .timeline-item p{font-size:12px;line-height:1.7}
+.career-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.career-tags span{font-size:10px;color:#27618f;border:1px solid #d5e8f9;background:#f5faff;border-radius:6px;padding:4px 7px}
+.career-side{position:relative;overflow:hidden;border:1px solid #cce5ff;border-radius:18px;padding:27px;background:radial-gradient(ellipse at 100% 0%,#d9efff 0,transparent 48%),linear-gradient(150deg,#eaf5ff,#f9fcff);min-height:100%}
+.career-side:after{content:"";position:absolute;right:-65px;bottom:-95px;width:210px;height:210px;border:1px solid #8dcaff45;border-radius:50%;box-shadow:0 0 0 25px #8dcaff12,0 0 0 50px #8dcaff0b;pointer-events:none}
+.career-side-head{display:flex;align-items:center;gap:13px;position:relative;z-index:1}.career-side-icon{display:grid;place-items:center;width:43px;height:43px;border-radius:13px;background:#fff;border:1px solid #cce5ff;color:#1688ff;font-size:22px;box-shadow:0 6px 15px #1b78c512}
+.career-side-head small{font-size:9px;letter-spacing:.14em;font-weight:800;color:#1688ff}.career-side-head h3{font-size:20px;margin:3px 0 0;color:#14243b}
+.career-side-lead{position:relative;z-index:1;font-size:13px;line-height:1.9;color:#526782;margin:20px 0 21px;padding-bottom:20px;border-bottom:1px solid #c9e1f7}
+.principle-list{position:relative;z-index:1;display:grid;gap:15px}.principle-line{display:flex;gap:12px;align-items:flex-start}.principle-line>span{font-size:10px;font-weight:800;color:#1688ff;background:#fff;border:1px solid #c9e5ff;border-radius:8px;padding:5px 6px}.principle-line div{display:flex;flex-direction:column;gap:3px}.principle-line b{font-size:13px;color:#1a304b}.principle-line small{font-size:11px;line-height:1.65;color:#60758d}
+.career-bottom{position:relative;z-index:1;display:flex;align-items:center;gap:9px;margin-top:24px;padding-top:16px;border-top:1px solid #c9e1f7;font-size:10px;letter-spacing:.08em;color:#42617f}.career-bottom b{color:#1688ff;font-size:14px}.pulse-dot{width:7px;height:7px;border-radius:50%;background:#1688ff;box-shadow:0 0 0 4px #1688ff18}
+@media(max-width:850px){.career-layout{grid-template-columns:1fr}.career-side{min-height:unset}}
+@media(max-width:600px){.career-main,.career-side{padding:20px}.career-side-head h3{font-size:18px}.career-intro{align-items:flex-start}}
+
 @media(max-width:850px){.workflow-card{max-width:620px}.workflow-head h3{font-size:24px}}
 @media(max-width:600px){.workflow-card{padding:18px}.workflow-head{flex-direction:column}.flow-line{gap:4px;grid-template-columns:1fr 15px 1fr 15px 1fr}.flow-icon,.oracle-word{width:48px;height:48px}.flow-node{font-size:10px}.workflow-item{padding:9px}.workflow-steps{gap:9px;font-size:10px}}
 
@@ -125,13 +144,25 @@ body.light .hero,body.light .dark-section{background:linear-gradient(135deg,#e9f
 <section id="experience">
  <div class="wrap">
   <div class="section-head"><div><div class="kicker">Experience</div><h2>경력과 업무 방향</h2></div><p>정확한 입사 연도와 직책은 이력에 맞춰 추가·수정할 수 있습니다.</p></div>
-  <div class="timeline">
-   <div class="timeline-list">
-    <div class="timeline-item"><time>2017 – 현재</time><h3>Oracle ERP 개발·운영</h3><p>ERP 개발, 유지보수, 업무 프로세스 개선</p></div>
-    <div class="timeline-item"><time>주요 업무</time><h3>회계·원가·프로젝트 시스템</h3><p>AP, GL, PA 및 호선별 원가·예산 관련 지원</p></div>
-    <div class="timeline-item"><time>프로젝트 수행</time><h3>개발부터 검증까지</h3><p>요건 분석, 개발, 테스트, 오류 수정 및 운영 안정화</p></div>
+  <div class="career-layout">
+   <div class="career-main">
+    <div class="career-intro"><span class="career-icon">↗</span><div><b>현업의 문제를 시스템 개선으로 연결합니다</b><p>개발·운영 경험을 바탕으로 업무 흐름과 데이터의 정확성을 함께 살핍니다.</p></div></div>
+    <div class="timeline-list">
+     <div class="timeline-item"><time>2017 – 현재</time><h3>Oracle ERP 개발·운영</h3><p>Oracle EBS 개발, 유지보수, 사용자 이슈 분석 및 업무 프로세스 개선</p><div class="career-tags"><span>Oracle EBS</span><span>PL/SQL</span><span>운영 안정화</span></div></div>
+     <div class="timeline-item"><time>업무 전문성</time><h3>회계 · 원가 · 프로젝트 시스템</h3><p>AP·GL·PA 업무 흐름과 호선별 원가·예산 관리 프로세스 지원</p><div class="career-tags"><span>회계 인터페이스</span><span>원가관리</span><span>예산 집행</span></div></div>
+     <div class="timeline-item"><time>프로젝트 수행</time><h3>요건 분석부터 검증·운영까지</h3><p>현업 요구 파악, 개발·테스트, 오류 원인 분석, 수정 및 운영 반영</p><div class="career-tags"><span>요건 분석</span><span>테스트</span><span>오류 개선</span></div></div>
+    </div>
    </div>
-   <div class="callout"><h3>제가 중요하게 생각하는 것</h3><p>시스템이 정상 동작하는 것에서 한 걸음 더 나아가, 사용자가 업무를 더 정확하고 빠르게 처리하고 데이터가 의사결정에 도움이 되도록 만드는 것입니다.</p><div class="label-row"><span class="mini-label" style="color:#22517a;border-color:#bdd9ef">업무 이해</span><span class="mini-label" style="color:#22517a;border-color:#bdd9ef">원인 분석</span><span class="mini-label" style="color:#22517a;border-color:#bdd9ef">지속 개선</span></div></div>
+   <div class="career-side">
+    <div class="career-side-head"><span class="career-side-icon">✦</span><div><small>MY WORKING PRINCIPLES</small><h3>제가 중요하게 생각하는 것</h3></div></div>
+    <p class="career-side-lead">시스템이 정상 동작하는 것에서 한 걸음 더 나아가, 사용자가 업무를 더 정확하고 빠르게 처리하고 데이터가 의사결정에 도움이 되도록 만드는 것입니다.</p>
+    <div class="principle-list">
+     <div class="principle-line"><span>01</span><div><b>업무 이해</b><small>화면과 프로그램보다 먼저 현업의 흐름을 이해합니다.</small></div></div>
+     <div class="principle-line"><span>02</span><div><b>원인 분석</b><small>현상만 처리하지 않고 데이터와 처리 단계를 따라 원인을 찾습니다.</small></div></div>
+     <div class="principle-line"><span>03</span><div><b>지속 개선</b><small>정확성·사용 편의성·운영 안정성을 함께 높입니다.</small></div></div>
+    </div>
+    <div class="career-bottom"><span class="pulse-dot"></span> ANALYZE <b>→</b> IMPROVE <b>→</b> VALIDATE</div>
+   </div>
   </div>
  </div>
 </section>
